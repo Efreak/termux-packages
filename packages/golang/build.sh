@@ -46,6 +46,7 @@ termux_step_make_install() {
 	cp -Rf lib/* $TERMUX_GODIR/lib
 	cp -Rf pkg/${TERMUX_GOLANG_DIRNAME}/* $TERMUX_GODIR/pkg/${TERMUX_GOLANG_DIRNAME}/
 	cp -Rf misc/ $TERMUX_GODIR/
+	wget --output-doxument $TERMUX_PREFIX/etc/bash_completion.d/go-pkg-complete.bash.inc https://github.com/skelterjohn/go-pkg-complete/raw/master/go-pkg-complete.bash.inc
 }
 
 termux_step_post_massage() {
